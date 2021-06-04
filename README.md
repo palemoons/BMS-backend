@@ -1,6 +1,6 @@
 # Introduction
 Backend of my project in **Principles of Database Systems**.  
-This part is done with `express` and `mysql server`.
+This part is done with `ExpressJS` and `mysql server`.
 # Usage
 1. Install
 ```
@@ -13,3 +13,5 @@ $ yarn start
 # Reference articles
 - [express-generator](https://expressjs.com/zh-cn/starter/generator.html)
 - [Nodejs (Express) connecting MySQL](https://stackoverflow.com/questions/38039929/nodejs-express-connecting-mysql-local-and-remote-connection-different)
+- [How to set cookie in node js using express framework?](https://stackoverflow.com/questions/16209145/how-to-set-cookie-in-node-js-using-express-framework)
+- [Express doesn't set a cookie](https://stackoverflow.com/questions/36824106/express-doesnt-set-a-cookie)
