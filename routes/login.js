@@ -4,7 +4,7 @@ var router = express.Router();
 var jwt = require('jsonwebtoken');
 
 /* get the POST from login page */
-router.post('/', function (req, res, next) {
+router.post('/', function (req, res) {
   pool.query(`SELECT admin_id FROM administrator WHERE admin_name='${req.body.user}' AND password='${req.body.pwd}'`, (err, rows) => {
     if (err) throw err;
     else if (rows.length === 0) {
@@ -29,6 +29,20 @@ router.post('/', function (req, res, next) {
     }
   })
 });
+
+router.get('/quit', (req, res) => {
+  jwt.verify(req.cookies.token, 'secret', (err, decoded) => {
+    if (err) throw err;
+    res.status(200)
+      .clearCookie('token', {
+        httpOnly: true
+      }, (err) => {
+        if (err) throw err;
+      })
+      .send();
+  });
+
+})
 
 module.exports = router;
 
