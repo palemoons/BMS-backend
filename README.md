@@ -17,3 +17,4 @@ $ yarn start
 - [Nodejs (Express) connecting MySQL](https://stackoverflow.com/questions/38039929/nodejs-express-connecting-mysql-local-and-remote-connection-different)
 - [How to set cookie in node js using express framework?](https://stackoverflow.com/questions/16209145/how-to-set-cookie-in-node-js-using-express-framework)
 - [Express doesn't set a cookie](https://stackoverflow.com/questions/36824106/express-doesnt-set-a-cookie)
+- [Sending a CSV file from browser to nodejs server](https://stackoverflow.com/questions/42087291/sending-a-csv-file-from-browser-to-nodejs-server)
