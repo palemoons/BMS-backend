@@ -17,6 +17,7 @@ router.post('/', function (req, res) {
           exp: Math.floor(Date.now() / 1000) + (60 * 60),
           'sub': 'login',
           'iss': req.body.user,
+          'id': rows[0]
         },
         'secret');
       res.status(200)
