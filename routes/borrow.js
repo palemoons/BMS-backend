@@ -54,11 +54,12 @@ router.post('/borrow', (req, res) => {
         })
         handleReq.then((resolve) => {
             if (resolve < 1) {
-                pool.query(`SELECT return_day FROM records WHERE book_id='${req.body.book_id}' ORDER BY return_day;`, (err, rows) => {
+                pool.query(`SELECT * FROM records WHERE book_id='${req.body.book_id}' ORDER BY borrow_day;`, (err, rows) => {
                     if (err) throw err;
+                    let return_day = new Date(rows[0].borrow_day.getTime() + 7 * 86400000);
                     res.status(403).send(JSON.stringify({
                         id: '02',
-                        err: `无库存:( 最近归还时间${rows[0].return_day.toISOString().slice(0, 10)}`
+                        err: `无库存:( 最近归还时间${return_day.toISOString().slice(0, 10)}`
                     }));
                 })
             }
