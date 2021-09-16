@@ -1,6 +1,6 @@
 # Introduction
 Backend of my project in **Principles of Database Systems**.  
-This part is done with `ExpressJS` and `mysql server`.
+This part is done with `ExpressJS` and `mysql server`.  
 :warning: The comments in this project is done in Chinese(So why do I write down the README in English?)
 
 # Usage
